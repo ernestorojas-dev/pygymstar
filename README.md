@@ -3,7 +3,7 @@
 [![View on GitHub](https://img.shields.io/badge/GitHub-View%20on%20GitHub-blue)](https://github.com/ernestorojas-dev/pygymstar)
 [![Fork of PyGMTSAR](https://img.shields.io/badge/Fork%20of-PyGMTSAR-orange)](https://github.com/AlexeyPechnikov/pygmtsar)
 [![Available on pypi](https://img.shields.io/pypi/v/pygmtsar.svg)](https://pypi.python.org/pypi/pygmtsar/)
-[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://hub.docker.com/r/pechnikov/pygmtsar)
+[![Docker](https://badgen.net/badge/icon/docker?icon=docker&label)](https://github.com/ernestorojas-dev/pygymstar)
 [![DOI](https://zenodo.org/badge/398018212.svg)](https://zenodo.org/badge/latestdoi/398018212)
 [![Support on Patreon](https://img.shields.io/badge/Patreon-Support-orange.svg)](https://www.patreon.com/pechnikov)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -44,9 +44,11 @@ This repository contains PyGMTSAR (Python InSAR) processing tools and examples m
 ### Option 1: Docker (Recommended)
 
 ```bash
-# Pull and run the pre-built image
-docker pull pechnikov/pygmtsar
-docker run -dp 8888:8888 --name pygmtsar pechnikov/pygmtsar
+# Build and run from this repository
+git clone https://github.com/ernestorojas-dev/pygymstar.git
+cd pygmtsar
+docker build . -f docker/pygmtsar.Dockerfile -t pygmtsar:latest --no-cache
+docker run -dp 8888:8888 --name pygmtsar pygmtsar:latest
 docker logs pygmtsar  # Get JupyterLab URL
 ```
 
@@ -258,7 +260,7 @@ This project is licensed under the MIT License - see the [LICENSE.TXT](LICENSE.T
 - 📖 **Documentation**: [pechnikov.dev](https://pechnikov.dev)
 - 🎥 **Video Tutorials**: [YouTube Channel](https://www.youtube.com/channel/UCSEeXKAn9f_bDiTjT6l87Lg)
 - 📊 **Interactive Examples**: [insar.dev](https://insar.dev)
-- 🐳 **Docker Hub**: [pechnikov/pygmtsar](https://hub.docker.com/r/pechnikov/pygmtsar)
+- 🐳 **Docker Build**: Build from [this repository](https://github.com/ernestorojas-dev/pygymstar)
 - 📦 **PyPI Package**: [pygmtsar](https://pypi.python.org/pypi/pygmtsar/)
 
 ---
